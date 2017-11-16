@@ -1,13 +1,10 @@
-source /opt/pearl/boot/vim/pearl.vim
-
 filetype plugin on
+syntax enable
 set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
 
 " autocmd bufwritepost *.js silent !standard-format -w %
 set autoread
-
-"set background=dark
-"colorscheme vim-colors-solarized
 
 :imap <C-U> <Esc>
 :nmap <C-C> :
@@ -21,5 +18,21 @@ Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'altercation/vim-colors-solarized'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'c9s/perlomni.vim'
 
 call plug#end()
+
+"set background=dark
+""colorscheme solarized
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
