@@ -13,9 +13,6 @@ imap <C-s> <Esc>:w<CR>a
 nmap <C-u> :
 imap <C-u> <Esc>:
 
-" Open buffer list
-nmap <C-b> :Buffers<CR>
-
 Plug 'preservim/nerdtree'
 "Start vim with nerdtree open, if no file specified
 autocmd StdinReadPre * let s:std_in=1
@@ -35,6 +32,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
+" Branching plugin for fugitive
+Plug 'idanarye/vim-merginal'
+" Gbrowse Bitbucket support
+Plug 'tommcdo/vim-fubitive'
+" Gbrowse Github support
+Plug 'tpope/vim-rhubarb'
+" Gbrowse Gitlab support
+Plug 'shumphrey/fugitive-gitlab.vim'
 
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
@@ -69,6 +74,7 @@ Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-projectionist'
