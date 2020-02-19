@@ -17,7 +17,7 @@ imap <C-u> <Esc>:
 
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-nmap <Leader>a :Ack 
+nmap <Leader>a :Ack! 
 
 Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -30,7 +30,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 
-Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 filetype plugin on
 
 Plug 'airblade/vim-rooter'
@@ -101,6 +101,8 @@ Plug 'postmodern/chruby'
 
 Plug 'ryanoasis/vim-devicons'
 set encoding=UTF-8
+
+Plug 'yggdroot/indentline'
 
 call plug#end()
 
