@@ -1,13 +1,14 @@
 call plug#begin('~/.vim/plugged')
 set number
-
+ 
 syntax enable
 set background=dark
 colorscheme default
 
 "Save with ctrl-s
-nmap <C-s> :w<CR>
+nmap <C-s> :w<CR> 
 imap <C-s> <Esc>:w<CR>a
+map <C-M-s> <Esc>:wq<CR>a 
 
 "Command mode shortcut
 nmap <C-u> :
@@ -32,9 +33,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
-nmap <Leader>gg :Git<CR>
-nmap <Leader>gf :Gpull<CR>
-nmap <Leader>gp :Gpush<CR>
+nmap <Leader>gf :Gpull
+nmap <Leader>gg :Git
+nmap <Leader>gl :Gclog
+nmap <Leader>gp :Gpush
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Branching plugin for fugitive
@@ -46,6 +48,9 @@ Plug 'tommcdo/vim-fubitive'
 Plug 'tpope/vim-rhubarb'
 " Gbrowse Gitlab support
 Plug 'shumphrey/fugitive-gitlab.vim'
+" Git log viewer
+Plug 'cohama/agit.vim'
+nmap <Leader>gl :Agit<CR>
 
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
@@ -65,8 +70,6 @@ Plug 'raimondi/delimitmate'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'valloric/youcompleteme'
 "Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'mileszs/ack.vim'
 
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'sunaku/vim-shortcut'
