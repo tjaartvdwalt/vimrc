@@ -33,8 +33,10 @@ let g:NERDTreeWinPos = "right"
 Plug 'preservim/nerdcommenter'
 filetype plugin on
 
-"Plug 'powerline/powerline'
-"let g:powerline_pycmd="py3"
+Plug 'airblade/vim-rooter'
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
