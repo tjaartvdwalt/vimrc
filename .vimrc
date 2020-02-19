@@ -8,13 +8,19 @@ colorscheme default
 "Save with ctrl-s
 nmap <C-s> :w<CR> 
 imap <C-s> <Esc>:w<CR>a
-map <C-M-s> <Esc>:wq<CR>a 
+nmap <C-z> :wq<CR>
+imap <C-z> <Esc>:wq<CR>
 
 "Command mode shortcut
 nmap <C-u> :
 imap <C-u> <Esc>:
 
+Plug 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
+nmap <Leader>a :Ack 
+
 Plug 'preservim/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
 "Start vim with nerdtree open, if no file specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -90,6 +96,9 @@ Plug 'tpope/vim-projectionist'
 
 Plug 'wincent/command-t'
 Plug 'postmodern/chruby'
+
+Plug 'ryanoasis/vim-devicons'
+set encoding=UTF-8
 
 call plug#end()
 
