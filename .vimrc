@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 set number
- 
+
+let mapleader = "."
+
 syntax enable
 "set background=dark
 Plug 'liuchengxu/space-vim-dark'
@@ -105,6 +107,12 @@ set encoding=UTF-8
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'mbbill/undotree'
+let g:undotree_WindowLayout = 3
+nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
+
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
