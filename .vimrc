@@ -2,8 +2,8 @@ call plug#begin('~/.vim/plugged')
 set number
  
 syntax enable
-set background=dark
-colorscheme default
+"set background=dark
+Plug 'liuchengxu/space-vim-dark'
 
 "Save with ctrl-s
 nmap <C-s> :w<CR> 
@@ -102,7 +102,16 @@ Plug 'postmodern/chruby'
 Plug 'ryanoasis/vim-devicons'
 set encoding=UTF-8
 
-Plug 'yggdroot/indentline'
+Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
+
+colorscheme space-vim-dark
+hi Comment guifg=#5C6370 ctermfg=59
+hi Comment    cterm=italic
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
