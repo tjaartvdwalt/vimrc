@@ -51,7 +51,7 @@ nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Branching plugin for fugitive
 Plug 'idanarye/vim-merginal'
-nmap <Leader>gm :Merginal<CR>
+nmap <Leader>gb :Merginal<CR>
 " Gbrowse Bitbucket support
 Plug 'tommcdo/vim-fubitive'
 " Gbrowse Github support
