@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 set number
+set list
 
 let mapleader = "."
 
@@ -8,7 +9,7 @@ syntax enable
 Plug 'liuchengxu/space-vim-dark'
 
 "Save with ctrl-s
-nmap <C-s> :w<CR> 
+nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
@@ -19,7 +20,7 @@ imap <C-u> <Esc>:
 
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-nmap <Leader>a :Ack! 
+nmap <Leader>a :Ack!
 
 Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -111,6 +112,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mbbill/undotree'
 let g:undotree_WindowLayout = 3
 nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
+
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
