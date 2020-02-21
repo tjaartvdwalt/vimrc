@@ -43,10 +43,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
-nmap <Leader>gf :Gpull
-nmap <Leader>gg :Git
-nmap <Leader>gl :Gclog
-nmap <Leader>gp :Gpush
+nmap <Leader>gf :Gpull<CR>
+nmap <Leader>gg :Git<CR>
+nmap <Leader>g<Space> :Git<Space>
+nmap <Leader>gp :Gpush<CR>
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Branching plugin for fugitive
