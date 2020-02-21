@@ -112,8 +112,6 @@ Plug 'mbbill/undotree'
 let g:undotree_WindowLayout = 3
 nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
-Plug 'terryma/vim-multiple-cursors'
-
 call plug#end()
 
 colorscheme space-vim-dark
