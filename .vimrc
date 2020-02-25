@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 set number
 set list
+set hlsearch
 
 let mapleader = "."
 
@@ -13,6 +14,8 @@ nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
+nmap <C-q> :q!<CR>
+imap <C-q> <Esc>:q!<CR>
 
 "Command mode shortcut
 nmap <C-u> :
@@ -114,6 +117,8 @@ let g:undotree_WindowLayout = 3
 nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 Plug 'ntpeters/vim-better-whitespace'
+
+"Plug 'haya14busa/incsearch.vim'
 
 call plug#end()
 
