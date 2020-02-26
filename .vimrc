@@ -53,7 +53,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
-nmap <Leader>gd :Gvdiffsplit<CR>
 nmap <Leader>gf :Git fetch<CR>
 nmap <Leader>gg :Git<CR>
 nmap <Leader>g<Space> :Git<Space>
@@ -85,7 +84,8 @@ filetype plugin on
 "set omnifunc=syntaxcomplete#Complete
 set omnifunc=ale#completion#OmniFunc
 set completeopt=longest,menuone
-map <C-i> :ALEFix<CR>
+nmap <C-i> :ALEFix<CR>:w<CR>
+imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
 Plug 'vim-scripts/AutoComplPop'
 
 Plug 'raimondi/delimitmate'
