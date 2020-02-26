@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 set number
 set list
-set hlsearch
+" set hlsearch
 
 let mapleader = "."
 
@@ -14,16 +14,22 @@ nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
-nmap <C-q> :q!<CR>
-imap <C-q> <Esc>:q!<CR>
+nmap <C-q> :q<CR>
+imap <C-q> <Esc>:q<CR>
 
 "Command mode shortcut
 nmap <C-u> :
 imap <C-u> <Esc>:
 
+" Close other windows, except currently focused one
+nmap <Leader>o :only<CR>
+
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-nmap <Leader>a :Ack!
+nmap <Leader>a :Ack!<Space>
+
+" Ack replacement
+" Plug 'wincent/ferret'
 
 Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -47,12 +53,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
-nmap <Leader>gf :Gpull<CR>
+nmap <Leader>gd :Gvdiffsplit<CR>
+nmap <Leader>gf :Git fetch<CR>
 nmap <Leader>gg :Git<CR>
 nmap <Leader>g<Space> :Git<Space>
-nmap <Leader>gp :Gpush<CR>
+nmap <Leader>gl :Gclog<CR>
+nmap <Leader>gp :Git push<CR>
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
+" Git log viewer
+Plug 'cohama/agit.vim'
+nmap <Leader>ga :Agit<CR>
 " Branching plugin for fugitive
 Plug 'idanarye/vim-merginal'
 nmap <Leader>gb :Merginal<CR>
@@ -62,9 +73,6 @@ Plug 'tommcdo/vim-fubitive'
 Plug 'tpope/vim-rhubarb'
 " Gbrowse Gitlab support
 Plug 'shumphrey/fugitive-gitlab.vim'
-" Git log viewer
-Plug 'cohama/agit.vim'
-nmap <Leader>gl :Agit<CR>
 
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
