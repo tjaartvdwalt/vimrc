@@ -61,11 +61,10 @@ nmap <Leader>gp :Git push<CR>
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Git log viewer
-Plug 'cohama/agit.vim'
-nmap <Leader>ga :Agit<CR>
-" Branching plugin for fugitive
-Plug 'idanarye/vim-merginal'
-nmap <Leader>gb :Merginal<CR>
+Plug 'junegunn/gv.vim'
+nmap <Leader>gv :GV<CR>
+Plug 'sodapopcan/vim-twiggy'
+nmap <Leader>gt :Twiggy<CR>
 " Gbrowse Bitbucket support
 Plug 'tommcdo/vim-fubitive'
 " Gbrowse Github support
