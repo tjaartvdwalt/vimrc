@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 set number
 set list
+" set autochdir
 " set hlsearch
 
 let mapleader = "."
@@ -17,9 +18,15 @@ imap <C-z> <Esc>:wq<CR>
 nmap <C-q> :q<CR>
 imap <C-q> <Esc>:q<CR>
 
+nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
 "Command mode shortcut
 nmap <C-u> :
 imap <C-u> <Esc>:
+
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Right> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Down> <C-w>l
 
 " Close other windows, except currently focused one
 nmap <Leader>o :only<CR>
@@ -64,7 +71,16 @@ nmap <Leader>gw :Gwrite
 Plug 'junegunn/gv.vim'
 nmap <Leader>gv :GV<CR>
 Plug 'sodapopcan/vim-twiggy'
+let g:twiggy_local_branch_sort = 'date'
+let g:twiggy_remote_branch_sort = 'date'
+
 nmap <Leader>gt :Twiggy<CR>
+
+augroup turbo_commit
+  autocmd!
+  autocmd BufEnter COMMIT_EDITMSG startinsert
+augroup END
+
 " Gbrowse Bitbucket support
 Plug 'tommcdo/vim-fubitive'
 " Gbrowse Github support
@@ -92,11 +108,15 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'valloric/youcompleteme'
 "Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'sunaku/vim-shortcut'
 
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
+nmap <C-b> :Buffers<CR>
+imap <C-b> <Esc>:Buffers<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>m :Maps<CR>
 
 Plug 'airblade/vim-gitgutter'
 
@@ -109,7 +129,6 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-projectionist'
 
-Plug 'wincent/command-t'
 Plug 'postmodern/chruby'
 
 Plug 'ryanoasis/vim-devicons'
@@ -125,7 +144,12 @@ nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 Plug 'ntpeters/vim-better-whitespace'
 
-"Plug 'haya14busa/incsearch.vim'
+Plug 'sirver/ultisnips'
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
