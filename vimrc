@@ -8,7 +8,7 @@ let mapleader = "."
 
 syntax enable
 "set background=dark
-Plug 'liuchengxu/space-vim-dark'
+" Plug 'liuchengxu/space-vim-dark'
 
 "Save with ctrl-s
 nmap <C-s> :w<CR>
@@ -31,15 +31,15 @@ nnoremap <C-Down> <C-w>l
 " Close other windows, except currently focused one
 nmap <Leader>o :only<CR>
 
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
 nmap <Leader>a :Ack!<Space>
 
 " Ack replacement
 " Plug 'wincent/ferret'
 
-Plug 'preservim/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'
+" Plug 'preservim/nerdtree'
+" Plug 'xuyuanp/nerdtree-git-plugin'
 "Start vim with nerdtree open, if no file specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -49,17 +49,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
 filetype plugin on
 
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+" Plug 'vim-airline/vim-airline-themes'
 
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 nmap <Leader>gf :Git fetch<CR>
 nmap <Leader>gg :Git<CR>
 nmap <Leader>g<Space> :Git<Space>
@@ -68,9 +69,9 @@ nmap <Leader>gp :Git push<CR>
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Git log viewer
-Plug 'junegunn/gv.vim'
+" Plug 'junegunn/gv.vim'
 nmap <Leader>gv :GV<CR>
-Plug 'sodapopcan/vim-twiggy'
+" Plug 'sodapopcan/vim-twiggy'
 let g:twiggy_local_branch_sort = 'date'
 let g:twiggy_remote_branch_sort = 'date'
 
@@ -82,76 +83,83 @@ augroup turbo_commit
 augroup END
 
 " Gbrowse Bitbucket support
-Plug 'tommcdo/vim-fubitive'
+" Plug 'tommcdo/vim-fubitive'
 " Gbrowse Github support
-Plug 'tpope/vim-rhubarb'
+" Plug 'tpope/vim-rhubarb'
 " Gbrowse Gitlab support
-Plug 'shumphrey/fugitive-gitlab.vim'
+" Plug 'shumphrey/fugitive-gitlab.vim'
 
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
+" let g:ale_completion_enabled = 1
 
 filetype plugin on
 "set omnifunc=syntaxcomplete#Complete
-set omnifunc=ale#completion#OmniFunc
-set completeopt=longest,menuone
+"set omnifunc=ale#completion#OmniFunc
+"set completeopt=longest,menuone
 nmap <C-i> :ALEFix<CR>:w<CR>
 imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 
-Plug 'raimondi/delimitmate'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'raimondi/delimitmate'
+"Plug 'scrooloose/nerdcommenter'
 "Plug 'valloric/youcompleteme'
 "Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'sunaku/vim-shortcut'
+" Plug 'sunaku/vim-shortcut'
 
-Plug '/usr/bin/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug '/usr/bin/fzf'
+" Plug 'junegunn/fzf.vim'
 nmap <C-b> :Buffers<CR>
 imap <C-b> <Esc>:Buffers<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>m :Maps<CR>
 
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 
-Plug 'tpope/vim-dadbod'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-jdaddy'
-Plug 'tpope/vim-projectionist'
+"Plug 'tpope/vim-dadbod'
+"Plug 'tpope/vim-eunuch'
+"Plug 'tpope/vim-sensible'
+"Plug 'tpope/vim-sleuth'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-rsi'
+"Plug 'tpope/vim-jdaddy'
+"Plug 'tpope/vim-projectionist'
 
-Plug 'postmodern/chruby'
+"Plug 'postmodern/chruby'
 
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 set encoding=UTF-8
 
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree'
 let g:undotree_WindowLayout = 3
 nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
-Plug 'ntpeters/vim-better-whitespace'
+" Plug 'ntpeters/vim-better-whitespace'
 
-Plug 'sirver/ultisnips'
+" Plug 'sirver/ultisnips'
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-let g:deoplete#enable_at_startup = 1
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
+" Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 call plug#end()
+
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#enable_at_startup = 1
+let g:nvim_typescript#javascript_support = 1
 
 colorscheme space-vim-dark
 hi Comment guifg=#5C6370 ctermfg=59

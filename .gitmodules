@@ -1,0 +1,102 @@
+[submodule "pack/tjaart/start/vim-fugitive"]
+	path = pack/tjaart/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/tjaart/start/ack.vim"]
+	path = pack/tjaart/start/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "pack/tjaart/start/nerdtree"]
+	path = pack/tjaart/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "pack/tjaart/start/nerdtree-git-plugin"]
+	path = pack/tjaart/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "pack/tjaart/opt/space-vim-dark"]
+	path = pack/tjaart/opt/space-vim-dark
+	url = https://github.com/liuchengxu/space-vim-dark
+[submodule "pack/tjaart/start/nerdcommenter"]
+	path = pack/tjaart/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter
+[submodule "pack/tjaart/start/vim-rooter"]
+	path = pack/tjaart/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+[submodule "pack/tjaart/start/vim-airline"]
+	path = pack/tjaart/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/tjaart/start/vim-airline-themes"]
+	path = pack/tjaart/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/tjaart/start/gv.vim"]
+	path = pack/tjaart/start/gv.vim
+	url = https://github.com/junegunn/gv.vim
+[submodule "pack/tjaart/start/vim-twiggy"]
+	path = pack/tjaart/start/vim-twiggy
+	url = https://github.com/sodapopcan/vim-twiggy
+[submodule "pack/tjaart/start/vim-fubitive"]
+	path = pack/tjaart/start/vim-fubitive
+	url = https://github.com/tommcdo/vim-fubitive
+[submodule "pack/tjaart/start/vim-rhubarb"]
+	path = pack/tjaart/start/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb
+[submodule "pack/tjaart/start/fugitive-gitlab.vim"]
+	path = pack/tjaart/start/fugitive-gitlab.vim
+	url = https://github.com/shumphrey/fugitive-gitlab.vim
+[submodule "pack/tjaart/start/ale"]
+	path = pack/tjaart/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "pack/tjaart/start/fzf.vim"]
+	path = pack/tjaart/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/tjaart/start/vim-shortcut"]
+	path = pack/tjaart/start/vim-shortcut
+	url = https://github.com/sunaku/vim-shortcut
+[submodule "pack/tjaart/start/vim-gitgutter"]
+	path = pack/tjaart/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "pack/tjaart/start/vim-rails"]
+	path = pack/tjaart/start/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule "pack/tjaart/start/vim-rake"]
+	path = pack/tjaart/start/vim-rake
+	url = https://github.com/tpope/vim-rake
+[submodule "pack/tjaart/start/vim-sleuth"]
+	path = pack/tjaart/start/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth
+[submodule "pack/tjaart/start/vim-sensible"]
+	path = pack/tjaart/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule "pack/tjaart/start/vim-surround"]
+	path = pack/tjaart/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/tjaart/start/vim-projectionist"]
+	path = pack/tjaart/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
+[submodule "pack/tjaart/start/chruby"]
+	path = pack/tjaart/start/chruby
+	url = https://github.com/postmodern/chruby
+[submodule "pack/tjaart/start/vim-devicons"]
+	path = pack/tjaart/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "pack/tjaart/start/vim-better-whitespace"]
+	path = pack/tjaart/start/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace
+[submodule "pack/tjaart/start/ultisnips"]
+	path = pack/tjaart/start/ultisnips
+	url = https://github.com/sirver/ultisnips
+[submodule "pack/tjaart/start/deoplete.nvim"]
+	path = pack/tjaart/start/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "pack/tjaart/start/nvim-yarp"]
+	path = pack/tjaart/start/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "pack/tjaart/start/vim-hug-neovim-rpc"]
+	path = pack/tjaart/start/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "pack/tjaart/start/deoplete-jedi"]
+	path = pack/tjaart/start/deoplete-jedi
+	url = https://github.com/deoplete-plugins/deoplete-jedi
+[submodule "pack/tjaart/start/undotree"]
+	path = pack/tjaart/start/undotree
+	url = https://github.com/mbbill/undotree
+[submodule "pack/tjaart/start/vim-dispatch"]
+	path = pack/tjaart/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
