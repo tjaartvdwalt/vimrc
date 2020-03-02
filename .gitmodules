@@ -4,9 +4,6 @@
 [submodule "pack/tjaart/start/ack.vim"]
 	path = pack/tjaart/start/ack.vim
 	url = https://github.com/mileszs/ack.vim
-[submodule "pack/tjaart/start/nerdtree"]
-	path = pack/tjaart/start/nerdtree
-	url = https://github.com/preservim/nerdtree
 [submodule "pack/tjaart/start/nerdtree-git-plugin"]
 	path = pack/tjaart/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
