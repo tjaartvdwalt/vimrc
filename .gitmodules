@@ -13,9 +13,6 @@
 [submodule "pack/tjaart/opt/space-vim-dark"]
 	path = pack/tjaart/opt/space-vim-dark
 	url = https://github.com/liuchengxu/space-vim-dark
-[submodule "pack/tjaart/start/nerdcommenter"]
-	path = pack/tjaart/start/nerdcommenter
-	url = https://github.com/preservim/nerdcommenter
 [submodule "pack/tjaart/start/vim-rooter"]
 	path = pack/tjaart/start/vim-rooter
 	url = https://github.com/airblade/vim-rooter
@@ -100,3 +97,9 @@
 [submodule "pack/tjaart/start/vim-dispatch"]
 	path = pack/tjaart/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
+[submodule "pack/tjaart/start/vim-vinegar"]
+	path = pack/tjaart/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule "pack/tjaart/start/vim-commentary"]
+	path = pack/tjaart/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
