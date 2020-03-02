@@ -1,4 +1,9 @@
-call plug#begin('~/.vim/plugged')
+source $HOME/.vim/config/general.vimrc
+source $HOME/.vim/config/plugins.vimrc
+source $HOME/.vim/config/keys.vimrc
+source $HOME/.vim/config/line.vimrc
+
+" call plug#begin('~/.vim/plugged')
 set number
 set list
 " set autochdir
@@ -155,7 +160,7 @@ nmap u :UndotreeToggle<CR>:UndotreeFocus<CR>
 " Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
-call plug#end()
+" call plug#end()
 
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
