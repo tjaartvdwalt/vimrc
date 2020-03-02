@@ -103,3 +103,6 @@
 [submodule "pack/tjaart/start/vim-dirvish-git"]
 	path = pack/tjaart/start/vim-dirvish-git
 	url = https://github.com/kristijanhusak/vim-dirvish-git
+[submodule "pack/tjaart/start/vim-eunuch"]
+	path = pack/tjaart/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch
