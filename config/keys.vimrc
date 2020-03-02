@@ -1,5 +1,5 @@
 map <C-a> :e #<CR>
-map <C-n> :Explore<CR>
+map <C-n> :Dirvish<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
@@ -20,7 +20,7 @@ nnoremap <C-Up> <C-w>k
 nnoremap <C-Down> <C-w>l
 
 " Close other windows, except currently focused one
-nmap <Leader>o :only<CR>
+nmap <C-o> :only<CR>
 
 " Plug 'tpope/vim-fugitive'
 nmap <Leader>gf :Git fetch<CR>
