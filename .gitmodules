@@ -97,12 +97,6 @@
 [submodule "pack/tjaart/start/vim-commentary"]
 	path = pack/tjaart/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "pack/tjaart/start/vim-dirvish"]
-	path = pack/tjaart/start/vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish
-[submodule "pack/tjaart/start/vim-dirvish-git"]
-	path = pack/tjaart/start/vim-dirvish-git
-	url = https://github.com/kristijanhusak/vim-dirvish-git
 [submodule "pack/tjaart/start/vim-eunuch"]
 	path = pack/tjaart/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
