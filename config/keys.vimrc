@@ -8,7 +8,7 @@ imap <C-z> <Esc>:wq<CR>
 nmap <C-q> :q<CR>
 imap <C-q> <Esc>:q<CR>
 
-nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
+" nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
 
 " Command mode shortcut
 nmap <C-u> :
@@ -48,3 +48,7 @@ nmap <Leader>gt :Twiggy<CR>
 nmap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 nmap <Leader>a :Ack!<Space>
+nmap <Leader>t :terminal<CR>
+
+autocmd FileType dirvish nnoremap <Buffer> gh :let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d'<Bar>Dirvish %<CR>
+autocmd FileType dirvish nnoremap <Buffer> gH :let g:dirvish_mode = ''<Bar>Dirvish %<CR>
