@@ -2,10 +2,11 @@ set encoding=UTF-8
 set number
 set list
 " set autochdir
+autocmd BufEnter * silent! lcd %:p:h
 " set hlsearch
 
 let mapleader = ","
-set wildmode=list
+set wildmode=list:longest
 
 syntax enable
 filetype plugin on

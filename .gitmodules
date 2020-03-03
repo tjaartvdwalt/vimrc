@@ -106,3 +106,6 @@
 [submodule "pack/tjaart/start/vim-eunuch"]
 	path = pack/tjaart/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "pack/tjaart/start/vim-bundler"]
+	path = pack/tjaart/start/vim-bundler
+	url = https://github.com/tpope/vim-bundler

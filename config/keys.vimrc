@@ -22,6 +22,9 @@ nnoremap <C-Down> <C-w>l
 " Close other windows, except currently focused one
 nmap <C-o> :only<CR>
 
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
+
 " Plug 'tpope/vim-fugitive'
 nmap <Leader>gf :Git fetch<CR>
 nmap <Leader>gg :Git<CR>
