@@ -103,3 +103,6 @@
 [submodule "pack/tjaart/start/vim-bundler"]
 	path = pack/tjaart/start/vim-bundler
 	url = https://github.com/tpope/vim-bundler
+[submodule "pack/tjaart/start/typescript-vim"]
+	path = pack/tjaart/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim

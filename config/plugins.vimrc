@@ -22,7 +22,7 @@ let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
 let g:nvim_typescript#javascript_support = 1
 
-let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d _'
+" let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d _'
 "Start vim with nerdtree open, if no file specified
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

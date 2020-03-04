@@ -1,5 +1,5 @@
 map <C-a> :e #<CR>
-map <C-n> :Dirvish<CR>
+map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
@@ -42,6 +42,9 @@ imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
 
 nmap <C-b> :Buffers<CR>
 imap <C-b> <Esc>:Buffers<CR>
+
+nmap <Leader>. :Commentary<CR>
+
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>m :Maps<CR>

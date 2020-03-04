@@ -2,7 +2,7 @@ set encoding=UTF-8
 set number
 set list
 " set autochdir
-autocmd BufEnter * silent! lcd %:p:h
+autocmd BufEnter * silent! cd %:p:h
 " set hlsearch
 
 let mapleader = ","
