@@ -22,6 +22,12 @@ let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
 let g:nvim_typescript#javascript_support = 1
 
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
+
+
+autocmd FileType typescript setlocal omnifunc=lsp#complete
+
+
 " let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d _'
 "Start vim with nerdtree open, if no file specified
 " autocmd StdinReadPre * let s:std_in=1

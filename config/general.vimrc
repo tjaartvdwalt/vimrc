@@ -10,7 +10,7 @@ set wildmode=list:longest
 
 syntax enable
 filetype plugin on
-
+set omnifunc=syntaxcomplete#Complete
 " netrw
 " let g:netrw_banner = 0
 " let g:netrw_browse_split = 1
