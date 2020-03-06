@@ -20,26 +20,15 @@ git submodule update --init
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-## Add a new package ##
+## Package Management ##
+
+We use the built in vim 8 package management, with minpac wrapper for ease of use.
+For the first time, minpac needs to be manually installed (minpac updates are handled by minpac)
 
 ```sh
-cd ~/.vim/pack/tjaart/start
-git submodule add PACKAGE_GIT_URL
-git add .gitmodules PACKAGE_NAME
+mkdir -p ~/.vim/pack/minpac/opt
+cd ~/.vim/pack/minpac/opt
+git clone https://github.com/k-takata/minpac.git
 ```
 
-## Update packages ##
-
-```sh
-git submodule update --remote --merge
-git commit
-```
-
-## Remove a package ##
-
-```sh
-git submodule deinit vim/pack/tjaart/start/PACKAGE_NAME
-git rm vim/pack/tjaart/start/PACKAGE_NAME
-rm -Rf .git/modules/vim/pack/tjaart/start/PACKAGE_NAME
-git commit
-```
+We have defined convenience commands `:PackUpdate` and `:PackClean` to keep packages in sync

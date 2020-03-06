@@ -1,3 +1,4 @@
 .netrwhist
 .viminfo
-.vim/plugged
+# We use minpac to manage packages
+/pack
