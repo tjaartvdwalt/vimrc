@@ -1,17 +1,11 @@
-# How to use this repo #
+# Using this repo with Vim 8 #
 
-## Clone the repo as ~/.vim directory ##
+## Clone the repo as your ~/.vim directory ##
 
-Clone the repo, and install packages as submodules
-
-```sh
-git clone --recurse-submodules git@github.com:tjaartvdwalt/vimrc.git ~/.vim
-```
-
-If you forget the `--recurse-submodules` switch, you can check out submodules after you cloned the repo
+Clone the repo
 
 ```sh
-git submodule update --init
+git clone git@github.com:tjaartvdwalt/vimrc.git ~/.vim
 ```
 
 ## Symlink vimrc ##
@@ -20,10 +14,10 @@ git submodule update --init
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-## Package Management ##
+## Installing packages ##
 
-We use the built in vim 8 package management, with minpac wrapper for ease of use.
-For the first time, minpac needs to be manually installed (minpac updates are handled by minpac)
+I use the vim 8, buit in package manager, with [minpac](https://github.com/k-takata/minpac).
+On first install, minpac needs to be manually cloned from its Git repo (minpac automatically updates itself in future)
 
 ```sh
 mkdir -p ~/.vim/pack/minpac/opt
@@ -31,4 +25,7 @@ cd ~/.vim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git
 ```
 
-We have defined convenience commands `:PackUpdate` and `:PackClean` to keep packages in sync
+For convenience I wrapped the minpac functions in commands 
+`:PackUpdate` -> Installs/Updates packages
+`:PackClean` -> Deletes packages that have been removed from the configuration
+`:PackStatus` -> Shows the current status of installed packages
