@@ -25,12 +25,10 @@ let g:nvim_typescript#javascript_support = 1
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 
-autocmd FileType typescript setlocal omnifunc=lsp#complete
-
-
 " let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d _'
 "Start vim with nerdtree open, if no file specified
-" autocmd StdinReadPre * let s:std_in=1
+" autocmd StdinReadPre * let s:std_i
+" n=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "Close vim if nerdtree is only buffer left
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -38,10 +36,13 @@ autocmd FileType typescript setlocal omnifunc=lsp#complete
 " map <C-n> :NERDTreeToggle<CR>
 " let g:NERDTreeWinPos = "right"
 
-" let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 1
+let g:ale_completion_tsserver_autoimport = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 
-"set omnifunc=syntaxcomplete#Complete
-"set omnifunc=ale#completion#OmniFunc
-"set completeopt=longest,menuone
+" set omnifunc=syntaxcomplete#Complete
+set omnifunc=ale#completion#OmniFunc
+set completeopt=longest,menuone
 
 

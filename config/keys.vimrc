@@ -37,8 +37,8 @@ nmap <Leader>gw :Gwrite
 " Plug 'junegunn/gv.vim'
 nmap <Leader>gv :GV<CR>
 
-nmap <C-i> :<CR>:w<CR>
-imap <C-i> <Esc>:<CR>:w<CR>a
+nmap <C-i> :ALEFix<CR>:w<CR>
+imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
 
 nmap <C-b> :Buffers<CR>
 imap <C-b> <Esc>:Buffers<CR>

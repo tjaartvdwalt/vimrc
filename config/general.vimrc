@@ -1,6 +1,9 @@
 set encoding=UTF-8
 set number
 set list
+
+set shell=$SHELL
+
 " set autochdir
 autocmd BufEnter * silent! cd %:p:h
 " set hlsearch
@@ -10,7 +13,6 @@ set wildmode=list:longest
 
 syntax enable
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
 " netrw
 " let g:netrw_banner = 0
 " let g:netrw_browse_split = 1
