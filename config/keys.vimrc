@@ -14,15 +14,19 @@ imap <C-q> <Esc>:q<CR>
 nmap <C-u> :
 imap <C-u> <Esc>:
 
-nnoremap <C-Left> <C-w>h
-nnoremap <C-Right> <C-w>j
-nnoremap <C-Up> <C-w>k
-nnoremap <C-Down> <C-w>l
-
 " Close other windows, except currently focused one
 nmap <C-o> :only<CR>
 
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+nmap <C-i> :ALEFix<CR>:w<CR>
+imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
+
+nmap <C-b> :Buffers<CR>
+imap <C-b> <Esc>:Buffers<CR>
+
+nmap <leader>v :edit ~/.vim/config<CR>
+nmap <silent> <leader>s :set spell!<CR>
+
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
 
 " Plug 'tpope/vim-fugitive'
@@ -37,12 +41,6 @@ nmap <Leader>gw :Gwrite
 " Plug 'junegunn/gv.vim'
 nmap <Leader>gv :GV<CR>
 
-nmap <C-i> :ALEFix<CR>:w<CR>
-imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
-
-nmap <C-b> :Buffers<CR>
-imap <C-b> <Esc>:Buffers<CR>
-
 nmap <Leader>. :Commentary<CR>
 
 nmap <Leader>b :Buffers<CR>
@@ -51,10 +49,7 @@ nmap <Leader>m :Maps<CR>
 
 nmap <Leader>gt :Twiggy<CR>
 
-nmap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
+nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 nmap <Leader>a :Ack!<Space>
-nmap <Leader>t :terminal<CR>
-
-autocmd FileType dirvish nnoremap <Buffer> gh :let g:dirvish_mode = ':silent keeppatterns g@\v/\.[^\/]+/?$@d'<Bar>Dirvish %<CR>
-autocmd FileType dirvish nnoremap <Buffer> gH :let g:dirvish_mode = ''<Bar>Dirvish %<CR>
+nmap <silent> <Leader>t :terminal<CR>

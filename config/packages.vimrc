@@ -9,7 +9,7 @@ command! PackStatus call minpac#status()
 
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('mileszs/ack.vim')
-call minpac#add('airblade/vim-rooter')
+" call minpac#add('airblade/vim-rooter')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('tpope/vim-fugitive')
