@@ -8,17 +8,34 @@ command! PackClean call minpac#clean()
 command! PackStatus call minpac#status()
 
 call minpac#add('tpope/vim-fugitive')
+augroup turbo_commit
+  autocmd!
+  autocmd BufEnter COMMIT_EDITMSG startinsert
+augroup END
+
 call minpac#add('mileszs/ack.vim')
+let g:ackprg = 'ag --vimgrep'
+
 " call minpac#add('airblade/vim-rooter')
+" let g:rooter_silent_chdir = 1
+" let g:rooter_resolve_links = 1
+
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('junegunn/gv.vim')
+
 call minpac#add('sodapopcan/vim-twiggy')
+let g:twiggy_local_branch_sort = 'date'
+let g:twiggy_remote_branch_sort = 'date'
+
 call minpac#add('tommcdo/vim-fubitive')
 call minpac#add('dense-analysis/ale')
 let g:ale_completion_enabled = 0
 let g:ale_completion_tsserver_autoimport = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-rails')
@@ -43,9 +60,9 @@ call minpac#add('vim-ruby/vim-ruby')
 
 call minpac#add('Shougo/deoplete.nvim')
 let g:deoplete#enable_at_startup = 1
-autocmd VimEnter * call deoplete#custom#option('sources', {
-\ 'typescript': ['ale'],
-\})
+let g:deoplete#auto_complete_start_length = 1
+
+autocmd VimEnter * call deoplete#custom#option('sources', { 'typescript': ['ale'] })
 call minpac#add('roxma/nvim-yarp')
 call minpac#add('roxma/vim-hug-neovim-rpc')
 "deoplete completion sources
