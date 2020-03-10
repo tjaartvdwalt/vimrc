@@ -53,10 +53,11 @@ call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-vinegar')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-eunuch')
-call minpac#add('tpope/vim-bundler')
+call minpac#add('tpope/vim-obsession')
 call minpac#add('leafgarland/typescript-vim')
 call minpac#add('tpope/vim-endwise')
 call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('tpope/vim-unimpaired')
 
 call minpac#add('Shougo/deoplete.nvim')
 let g:deoplete#enable_at_startup = 1
@@ -68,6 +69,8 @@ call minpac#add('roxma/vim-hug-neovim-rpc')
 "deoplete completion sources
 call minpac#add('takkii/Bignyanco')
 call minpac#add('deoplete-plugins/deoplete-jedi')
+
+call minpac#add('alvan/vim-closetag')
 
 
 " Optional packages

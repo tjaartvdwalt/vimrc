@@ -44,7 +44,7 @@ nmap <Leader>gv :GV<CR>
 nmap <Leader>. :Commentary<CR>
 
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>f :Files<CR>
+nmap <Leader>f :GFiles<CR>
 nmap <Leader>m :Maps<CR>
 
 nmap <Leader>gt :Twiggy<CR>
