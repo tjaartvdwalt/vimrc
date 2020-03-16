@@ -1,5 +1,5 @@
 map <C-a> :e #<CR>
-map <C-n> :Explore<CR>
+" map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
@@ -52,3 +52,5 @@ nmap <Leader>gt :Twiggy<CR>
 nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 nmap <silent> <Leader>t :terminal<CR>
+
+command! -nargs=1 Ag execute "Ack! <args> " . rooter#FindRootDirectory()

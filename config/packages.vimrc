@@ -16,8 +16,6 @@ augroup END
 call minpac#add('mileszs/ack.vim')
 let g:ackprg = 'ag --vimgrep'
 
-
-
 call minpac#add('airblade/vim-rooter')
 let g:rooter_manual_only = 1
 " let g:rooter_silent_chdir = 1
@@ -68,6 +66,7 @@ call minpac#add('tpope/vim-obsession')
 call minpac#add('leafgarland/typescript-vim')
 call minpac#add('tpope/vim-endwise')
 call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('tpope/vim-bundler')
 call minpac#add('tpope/vim-unimpaired')
 
 call minpac#add('Shougo/deoplete.nvim')
@@ -82,10 +81,9 @@ call minpac#add('takkii/Bignyanco')
 call minpac#add('deoplete-plugins/deoplete-jedi')
 
 call minpac#add('alvan/vim-closetag')
-
+call minpac#add('machakann/vim-highlightedyank')
 
 " Optional packages
 call minpac#add('liuchengxu/space-vim-dark', {'type': 'opt'})
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-
 
