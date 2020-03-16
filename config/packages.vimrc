@@ -16,9 +16,16 @@ augroup END
 call minpac#add('mileszs/ack.vim')
 let g:ackprg = 'ag --vimgrep'
 
-" call minpac#add('airblade/vim-rooter')
+
+
+call minpac#add('airblade/vim-rooter')
+let g:rooter_manual_only = 1
 " let g:rooter_silent_chdir = 1
 " let g:rooter_resolve_links = 1
+
+command! -nargs=1 AckProject execute "Ack! <args> " . FindRootDirectory()
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :AckProject<Space>
 
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')

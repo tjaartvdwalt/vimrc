@@ -51,5 +51,4 @@ nmap <Leader>gt :Twiggy<CR>
 
 nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
-nmap <Leader>a :Ack!<Space>
 nmap <silent> <Leader>t :terminal<CR>
