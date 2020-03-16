@@ -30,11 +30,11 @@ nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
 
 " Plug 'tpope/vim-fugitive'
-nmap <Leader>gf :Git fetch<CR>
+" nmap <Leader>gf :Git fetch<CR>
 nmap <Leader>gg :Git<CR>
 nmap <Leader>g<Space> :Git<Space>
 nmap <Leader>gl :Gclog<CR>
-nmap <Leader>gp :Git push<CR>
+"nmap <Leader>gp :Git push<CR>
 nmap <Leader>gr :Gread
 nmap <Leader>gw :Gwrite
 " Git log viewer

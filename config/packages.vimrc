@@ -30,6 +30,10 @@ nnoremap <Leader>a :AckProject<Space>
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('tpope/vim-fugitive')
+cnoreabbrev g Git
+cnoreabbrev gr Gread
+cnoreabbrev gw Gwrite
+
 call minpac#add('junegunn/gv.vim')
 
 call minpac#add('sodapopcan/vim-twiggy')
