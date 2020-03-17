@@ -46,6 +46,8 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 
 call minpac#add('junegunn/fzf.vim')
+let g:fzf_preview_window = ''
+
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-rails')
 call minpac#add('tpope/vim-rake')
@@ -82,6 +84,9 @@ call minpac#add('deoplete-plugins/deoplete-jedi')
 
 call minpac#add('alvan/vim-closetag')
 call minpac#add('machakann/vim-highlightedyank')
+
+call minpac#add('chiel92/vim-autoformat')
+call minpac#add('neowit/vim-force.com')
 
 " Optional packages
 call minpac#add('liuchengxu/space-vim-dark', {'type': 'opt'})

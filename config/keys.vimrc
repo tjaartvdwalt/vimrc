@@ -17,14 +17,16 @@ imap <C-u> <Esc>:
 " Close other windows, except currently focused one
 nmap <C-o> :only<CR>
 
-nmap <C-i> :ALEFix<CR>:w<CR>
-imap <C-i> <Esc>:ALEFix<CR>:w<CR>a
+nmap <C-i> :Autoformat<CR>
+imap <C-i> <Esc>:Autoformat<CR>a
 
 nmap <C-b> :Buffers<CR>
 imap <C-b> <Esc>:Buffers<CR>
 
 nmap <leader>v :edit ~/.vim/config<CR>
 nmap <silent> <leader>s :set spell!<CR>
+
+cnoreabbrev ex Explore
 
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
