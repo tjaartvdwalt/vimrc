@@ -46,7 +46,8 @@ let g:projectionist_heuristics = {
       \     },
       \     "force-app/main/default/triggers/*.trigger": {
       \       "type": "trigger"
-      \     }
+      \     },
+      \     "force-app/main/default/*": {"dispatch": "sfdx force:source:deploy -u WestmontSandbox --sourcepath force-app/main/default/{dirname}"}
       \   }
       \}
 
