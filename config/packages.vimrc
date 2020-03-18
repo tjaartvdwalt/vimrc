@@ -55,6 +55,7 @@ call minpac#add('tpope/vim-sleuth')
 call minpac#add('tpope/vim-sensible')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-projectionist')
+
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('ntpeters/vim-better-whitespace')
 call minpac#add('sirver/ultisnips')
@@ -75,20 +76,20 @@ call minpac#add('Shougo/deoplete.nvim')
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 1
 
-autocmd VimEnter * call deoplete#custom#option('sources', { 'typescript': ['ale'] })
 call minpac#add('roxma/nvim-yarp')
 call minpac#add('roxma/vim-hug-neovim-rpc')
+
 "deoplete completion sources
 call minpac#add('takkii/Bignyanco')
 call minpac#add('deoplete-plugins/deoplete-jedi')
+" " requires npm install -g neovim
+" call minpac#add('HerringtonDarkholme/yats.vim')
+" call minpac#add('mhartington/nvim-typescript')
+
 
 call minpac#add('alvan/vim-closetag')
 call minpac#add('machakann/vim-highlightedyank')
 
 call minpac#add('chiel92/vim-autoformat')
 call minpac#add('neowit/vim-force.com')
-
-" Optional packages
-call minpac#add('liuchengxu/space-vim-dark', {'type': 'opt'})
-call minpac#add('k-takata/minpac', {'type': 'opt'})
 
