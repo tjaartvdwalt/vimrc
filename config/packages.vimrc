@@ -92,4 +92,8 @@ call minpac#add('machakann/vim-highlightedyank')
 
 call minpac#add('chiel92/vim-autoformat')
 call minpac#add('neowit/vim-force.com')
-
+" Download the jar from https://github.com/neowit/tooling-force.com/releases
+let g:apex_tooling_force_dot_com_path = '/home/tjaart/lib/tooling-force.com-0.4.7.0.jar'
+let g:apex_backup_folder='/tmp/apex/backup'
+let g:apex_temp_folder='/tmp/apex/gvim-deployment'
+let g:apex_properties_folder="/tmp/apex/properties"

@@ -29,12 +29,23 @@ let g:projectionist_heuristics = {
       \       "alternate": "force-app/main/default/lwc/{dirname}/{basename}.js"
       \     },
       \     "force-app/main/default/lwc/*.js": {
-      \       "type": "source",
+      \       "type": "js",
       \       "alternate": "force-app/main/default/lwc/{dirname}/{basename}.html"
       \     },
       \     "force-app/main/default/lwc/*.css": {
-      \       "type": "style",
+      \       "type": "css",
       \       "alternate": "force-app/main/default/lwc/{dirname}/{basename}.html"
+      \     },
+      \     "force-app/main/default/classes/*.cls": {
+      \       "type": "apex",
+      \       "alternate": "force-app/main/default/classes/Test_{}.cls"
+      \     },
+      \     "force-app/main/default/classes/Test_*.cls": {
+      \       "type": "apexTest",
+      \       "alternate": "force-app/main/default/classes/{}.cls"
+      \     },
+      \     "force-app/main/default/triggers/*.trigger": {
+      \       "type": "trigger"
       \     }
       \   }
       \}
