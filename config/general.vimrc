@@ -1,5 +1,6 @@
 set encoding=UTF-8
-set number
+set relativenumber
+set nu rnu
 set list
 
 set shell=$SHELL
