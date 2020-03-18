@@ -1,4 +1,5 @@
-map <C-a> :e #<CR>
+map <C-a> :A<CR>
+map <C-_> :Commentary<CR>
 " map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
