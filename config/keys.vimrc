@@ -1,5 +1,4 @@
 map <C-a> :A<CR>
-map <C-_> :Commentary<CR>
 " map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
@@ -21,8 +20,8 @@ nmap <C-o> :only<CR>
 nmap <C-i> :Autoformat<CR>
 imap <C-i> <Esc>:Autoformat<CR>a
 
-nmap <C-b> :Buffers<CR>
-imap <C-b> <Esc>:Buffers<CR>
+nmap <C-b> :b#<CR>
+imap <C-b> <Esc>:b#<CR>
 
 nmap <leader>v :edit ~/.vim/config<CR>
 nmap <silent> <leader>s :set spell!<CR>
@@ -31,20 +30,6 @@ cnoreabbrev ex Explore
 
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
-
-" Plug 'tpope/vim-fugitive'
-" nmap <Leader>gf :Git fetch<CR>
-nmap <Leader>gg :Git<CR>
-nmap <Leader>g<Space> :Git<Space>
-nmap <Leader>gl :Gclog<CR>
-"nmap <Leader>gp :Git push<CR>
-nmap <Leader>gr :Gread
-nmap <Leader>gw :Gwrite
-" Git log viewer
-" Plug 'junegunn/gv.vim'
-nmap <Leader>gv :GV<CR>
-
-nmap <Leader>. :Commentary<CR>
 
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :GFiles<CR>

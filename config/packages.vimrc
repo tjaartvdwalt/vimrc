@@ -31,8 +31,10 @@ call minpac#add('tpope/vim-fugitive')
 cnoreabbrev g Git
 cnoreabbrev gr Gread
 cnoreabbrev gw Gwrite
+cnoreabbrev gd Gvdiffsplit
 
 call minpac#add('junegunn/gv.vim')
+cnoreabbrev gl GV
 
 call minpac#add('sodapopcan/vim-twiggy')
 let g:twiggy_local_branch_sort = 'date'
@@ -67,6 +69,8 @@ call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-eunuch')
 call minpac#add('tpope/vim-obsession')
 call minpac#add('leafgarland/typescript-vim')
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('mattn/emmet-vim')
 call minpac#add('tpope/vim-endwise')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('tpope/vim-bundler')
@@ -89,6 +93,7 @@ call minpac#add('deoplete-plugins/deoplete-jedi')
 
 call minpac#add('alvan/vim-closetag')
 call minpac#add('machakann/vim-highlightedyank')
+call minpac#add('vim-scripts/YankRing.vim')
 
 call minpac#add('chiel92/vim-autoformat')
 call minpac#add('neowit/vim-force.com')
@@ -96,4 +101,5 @@ call minpac#add('neowit/vim-force.com')
 let g:apex_tooling_force_dot_com_path = '/home/tjaart/lib/tooling-force.com-0.4.7.0.jar'
 let g:apex_backup_folder='/tmp/apex/backup'
 let g:apex_temp_folder='/tmp/apex/gvim-deployment'
-let g:apex_properties_folder="/tmp/apex/properties"
+let g:apex_properties_folder='/tmp/apex/properties'
+
