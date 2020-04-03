@@ -5,6 +5,12 @@ imap <C-s> <Esc>:w<CR>a
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
 
+" Wayland system clipboard copy/paste. Can remove this once this issue has
+" been resolved:  https://github.com/vim/vim/issues/5157
+xnoremap "+y y:call system("wl-copy", @")<cr>
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
+
 " nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
 
 " Command mode shortcut
@@ -12,16 +18,25 @@ nmap <C-u> :
 imap <C-u> <Esc>:
 
 " Close other windows, except currently focused one
+cnoreabbrev o only
 nmap <C-o> :only<CR>
 
-nmap <C-i> :Autoformat<CR>
-imap <C-i> <Esc>:Autoformat<CR>a
+nmap <C-i> :ALEFix<CR>
+imap <C-i> <Esc>:ALEFix<CR>a
 
 nmap <C-b> :b#<CR>
 imap <C-b> <Esc>:b#<CR>
 
 nmap <leader>v :edit ~/.vim/config<CR>
 nmap <silent> <leader>s :set spell!<CR>
+
+" Tab related command shortcuts
+cnoreabbrev t tab
+cnoreabbrev te tabedit
+cnoreabbrev tc tabclose
+cnoreabbrev tm tabm
+cnoreabbrev to tabonly
+cnoreabbrev ts tabs
 
 cnoreabbrev ex Explore
 
@@ -32,10 +47,6 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>m :Maps<CR>
 
-nmap <Leader>gt :Twiggy<CR>
-
 nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
-
-nmap <silent> <Leader>t :terminal<CR>
 
 command! -nargs=1 Ag execute "Ack! <args> " . rooter#FindRootDirectory()

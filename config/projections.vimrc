@@ -8,7 +8,8 @@ let g:projectionist_heuristics = {
       \       "type": "view"
       \     },
       \     "src/store/modules/*.ts": {
-      \       "type": "store"
+      \       "type": "store",
+      \       "alternate":"tests/unit/store/modules/{basename}.spec.ts"
       \     },
       \     "src/types/*.ts": {
       \       "type": "type"
@@ -16,8 +17,9 @@ let g:projectionist_heuristics = {
       \     "src/router/*.ts": {
       \       "type": "route"
       \     },
-      \     "tests/unit/*.ts": {
-      \       "type": "unit"
+      \     "tests/unit/*.spec.ts": {
+      \       "type": "unit",
+      \       "alternate":"src/{dirname}/{basename}.ts"
       \     },
       \     "tests/e2e/specs/*.js": {
       \       "type": "integration"

@@ -8,10 +8,17 @@ command! PackClean call minpac#clean()
 command! PackStatus call minpac#status()
 
 call minpac#add('tpope/vim-fugitive')
+cnoreabbrev g Git
+cnoreabbrev gr Gread
+cnoreabbrev gw Gwrite
+cnoreabbrev gd Gvdiffsplit
 augroup turbo_commit
   autocmd!
   autocmd BufEnter COMMIT_EDITMSG startinsert
 augroup END
+
+call minpac#add('christoomey/vim-conflicted')
+set stl+=%{ConflictedVersion()}
 
 call minpac#add('mileszs/ack.vim')
 let g:ackprg = 'ag --vimgrep'
@@ -27,16 +34,13 @@ nnoremap <Leader>a :AckProject<Space>
 
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
-call minpac#add('tpope/vim-fugitive')
-cnoreabbrev g Git
-cnoreabbrev gr Gread
-cnoreabbrev gw Gwrite
-cnoreabbrev gd Gvdiffsplit
 
 call minpac#add('junegunn/gv.vim')
 cnoreabbrev gl GV
 
 call minpac#add('sodapopcan/vim-twiggy')
+cnoreabbrev gt Twiggy
+
 let g:twiggy_local_branch_sort = 'date'
 let g:twiggy_remote_branch_sort = 'date'
 
@@ -61,6 +65,7 @@ call minpac#add('tpope/vim-projectionist')
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('ntpeters/vim-better-whitespace')
 call minpac#add('sirver/ultisnips')
+call minpac#add('honza/vim-snippets')
 call minpac#add('mbbill/undotree')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('tpope/vim-rhubarb')
@@ -93,7 +98,17 @@ call minpac#add('deoplete-plugins/deoplete-jedi')
 
 call minpac#add('alvan/vim-closetag')
 call minpac#add('machakann/vim-highlightedyank')
-call minpac#add('vim-scripts/YankRing.vim')
+
+call minpac#add('maxbrunsfeld/vim-yankstack')
+
+" fix meta-keys which generate <Esc>a .. <Esc>z
+let c='a'
+while c <= 'z'
+  exec "set <M-".toupper(c).">=\e".c
+  exec "imap \e".c." <M-".toupper(c).">"
+  let c = nr2char(1+char2nr(c))
+
+endw
 
 call minpac#add('chiel92/vim-autoformat')
 call minpac#add('neowit/vim-force.com')
