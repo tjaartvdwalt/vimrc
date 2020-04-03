@@ -1,12 +1,9 @@
-map <C-a> :A<CR>
 " map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
-nmap <C-q> :q<CR>
-imap <C-q> <Esc>:q<CR>
 
 " nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
 
