@@ -12,6 +12,7 @@ cnoreabbrev g Git
 cnoreabbrev gr Gread
 cnoreabbrev gw Gwrite
 cnoreabbrev gd Gvdiffsplit
+cnoreabbrev gs Git stash
 augroup turbo_commit
   autocmd!
   autocmd BufEnter COMMIT_EDITMSG startinsert
