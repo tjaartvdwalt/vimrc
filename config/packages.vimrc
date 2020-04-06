@@ -34,6 +34,8 @@ nnoremap <Leader>a :AckProject<Space>
 
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#fugitiveline#enabled = 0
 
 call minpac#add('junegunn/gv.vim')
 cnoreabbrev gl GV
