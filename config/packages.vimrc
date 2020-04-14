@@ -24,14 +24,15 @@ set stl+=%{ConflictedVersion()}
 call minpac#add('mileszs/ack.vim')
 let g:ackprg = 'ag --vimgrep'
 
+command! -nargs=1 AckProject execute "Ack! <args> " . FindRootDirectory()
+cnoreabbrev ack Ack!
+nnoremap <Leader>a :AckProject<Space>
+
+
 call minpac#add('airblade/vim-rooter')
 let g:rooter_manual_only = 1
 " let g:rooter_silent_chdir = 1
 " let g:rooter_resolve_links = 1
-
-command! -nargs=1 AckProject execute "Ack! <args> " . FindRootDirectory()
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :AckProject<Space>
 
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
@@ -49,6 +50,7 @@ let g:twiggy_remote_branch_sort = 'date'
 
 call minpac#add('tommcdo/vim-fubitive')
 call minpac#add('dense-analysis/ale')
+cnoreabbrev l  ALEFix
 let g:ale_completion_enabled = 0
 let g:ale_completion_tsserver_autoimport = 1
 let g:ale_set_loclist = 0
@@ -64,6 +66,7 @@ call minpac#add('tpope/vim-sleuth')
 call minpac#add('tpope/vim-sensible')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-projectionist')
+cnoreabbrev a A
 
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('ntpeters/vim-better-whitespace')
@@ -113,11 +116,33 @@ while c <= 'z'
 
 endw
 
-call minpac#add('chiel92/vim-autoformat')
+" call minpac#add('chiel92/vim-autoformat')
+" cnoreabbrev f Autoformat
+
+call minpac#add('sbdchd/neoformat')
+cnoreabbrev f Neoformat
+let g:neoformat_enabled_html = ['prettier']
+let g:neoformat_enabled_javascript = ['prettier']
+let g:neoformat_enabled_java = ['prettier']
+let g:neoformat_enabled_python = ['black']
+let g:neoformat_enabled_ruby = ['rufo']
+let g:neoformat_enabled_typescript = ['prettier']
+
+" call minpac#add('prettier/vim-prettier')
+
 call minpac#add('neowit/vim-force.com')
 " Download the jar from https://github.com/neowit/tooling-force.com/releases
 let g:apex_tooling_force_dot_com_path = '/home/tjaart/lib/tooling-force.com-0.4.7.0.jar'
 let g:apex_backup_folder='/tmp/apex/backup'
 let g:apex_temp_folder='/tmp/apex/gvim-deployment'
 let g:apex_properties_folder='/tmp/apex/properties'
+
+call minpac#add('blindfs/vim-taskwarrior')
+call minpac#add('tpope/vim-speeddating')
+
+" call minpac#add('her/central.vim')
+" let g:central_cleanup_enable = 30
+call minpac#add('conradirwin/vim-bracketed-paste')
+
+call minpac#add('mtth/scratch.vim')
 

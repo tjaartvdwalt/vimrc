@@ -21,9 +21,6 @@ imap <C-u> <Esc>:
 cnoreabbrev o only
 nmap <C-o> :only<CR>
 
-nmap <C-i> :ALEFix<CR>
-imap <C-i> <Esc>:ALEFix<CR>a
-
 nmap <C-b> :b#<CR>
 imap <C-b> <Esc>:b#<CR>
 
@@ -48,5 +45,3 @@ nmap <Leader>f :GFiles<CR>
 nmap <Leader>m :Maps<CR>
 
 nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
-
-command! -nargs=1 Ag execute "Ack! <args> " . rooter#FindRootDirectory()

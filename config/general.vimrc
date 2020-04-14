@@ -2,11 +2,18 @@ set encoding=UTF-8
 set relativenumber
 set nu rnu
 set list
-
+set spell
 set shell=$SHELL
+set tabstop=4
+
+set hlsearch
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " set autochdir
-autocmd BufEnter * silent! cd %:p:h
+autocmd BufEnter * silent! lcd %:p:h
 " set hlsearch
 
 let mapleader = ","
