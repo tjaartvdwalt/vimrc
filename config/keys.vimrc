@@ -1,7 +1,7 @@
 " map <C-n> :Explore<CR>
 " Save with ctrl-s
 nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
+imap <C-s> <Esc>:w<CR>
 nmap <C-z> :wq<CR>
 imap <C-z> <Esc>:wq<CR>
 
@@ -33,7 +33,6 @@ cnoreabbrev te tabedit
 cnoreabbrev tc tabclose
 cnoreabbrev tm tabm
 cnoreabbrev to tabonly
-cnoreabbrev ts tabs
 
 cnoreabbrev ex Explore
 
@@ -44,4 +43,3 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>m :Maps<CR>
 
-nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>

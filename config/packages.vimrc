@@ -18,9 +18,6 @@ augroup turbo_commit
   autocmd BufEnter COMMIT_EDITMSG startinsert
 augroup END
 
-call minpac#add('christoomey/vim-conflicted')
-set stl+=%{ConflictedVersion()}
-
 call minpac#add('mileszs/ack.vim')
 let g:ackprg = 'ag --vimgrep'
 
@@ -34,10 +31,19 @@ let g:rooter_manual_only = 1
 " let g:rooter_silent_chdir = 1
 " let g:rooter_resolve_links = 1
 
+call minpac#add('christoomey/vim-conflicted')
+let g:diffget_local_map = 'gl'
+let g:diffget_upstream_map = 'gu'
+
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#fugitiveline#enabled = 0
+" Poor man's airline plugin, add conflicted text to section c
+let g:airline_section_c = '%F    %{ConflictedVersion()}'
+let g:airline#extensions#syntastic#enabled = 1
+" let airline#extensions#syntastic#error_symbol = 'E:'
+" let airline#extensions#syntastic#stl_format_err = '%E{[%fe(#%e)]}'
+let g:airline#extensions#ale#enabled = 1
 
 call minpac#add('junegunn/gv.vim')
 cnoreabbrev gl GV
@@ -49,12 +55,13 @@ let g:twiggy_local_branch_sort = 'date'
 let g:twiggy_remote_branch_sort = 'date'
 
 call minpac#add('tommcdo/vim-fubitive')
+
 call minpac#add('dense-analysis/ale')
 cnoreabbrev l  ALEFix
 let g:ale_completion_enabled = 0
 let g:ale_completion_tsserver_autoimport = 1
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
+" let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 1
 
 call minpac#add('junegunn/fzf.vim')
 let g:fzf_preview_window = ''
@@ -70,9 +77,26 @@ cnoreabbrev a A
 
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('ntpeters/vim-better-whitespace')
+
+call minpac#add('ervandew/supertab')
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+call minpac#add('ycm-core/YouCompleteMe')
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
 call minpac#add('sirver/ultisnips')
 call minpac#add('honza/vim-snippets')
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<right>"
+let g:UltiSnipsJumpBackwardTrigger = "<left>"
+
+
 call minpac#add('mbbill/undotree')
+nmap <silent> <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
+
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-vinegar')
@@ -86,21 +110,6 @@ call minpac#add('tpope/vim-endwise')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('tpope/vim-bundler')
 call minpac#add('tpope/vim-unimpaired')
-
-call minpac#add('Shougo/deoplete.nvim')
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 1
-
-call minpac#add('roxma/nvim-yarp')
-call minpac#add('roxma/vim-hug-neovim-rpc')
-
-"deoplete completion sources
-call minpac#add('takkii/Bignyanco')
-call minpac#add('deoplete-plugins/deoplete-jedi')
-" " requires npm install -g neovim
-" call minpac#add('HerringtonDarkholme/yats.vim')
-" call minpac#add('mhartington/nvim-typescript')
-
 
 call minpac#add('alvan/vim-closetag')
 call minpac#add('machakann/vim-highlightedyank')
@@ -145,4 +154,8 @@ call minpac#add('tpope/vim-speeddating')
 call minpac#add('conradirwin/vim-bracketed-paste')
 
 call minpac#add('mtth/scratch.vim')
+let g:scratch_autohide = 1
+let g:scratch_insert_autohide = 1
 
+" call minpac#add('vim-syntastic/syntastic')
+" call minpac#add('Quramy/tsuquyomi')

@@ -1,4 +1,14 @@
 let g:projectionist_heuristics = {
+      \   ".git/": {
+      \     "bitbucket-pipelines.yml": {
+      \       "type": "pipeline"
+      \     }
+      \   },
+      \   "package.json": {
+      \     "package.json": {
+      \       "type": "package"
+      \     }
+      \   },
       \   "vue.config.js": {
       \     "src/components/*.vue": {
       \       "type": "component",
