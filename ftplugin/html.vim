@@ -1,2 +1,2 @@
-" cnoreabbrev f Prettier
-
+let b:ale_fixers = ['prettier']
+let b:ale_linters = ['prettier']

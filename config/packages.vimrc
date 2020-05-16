@@ -28,8 +28,14 @@ nnoremap <Leader>a :AckProject<Space>
 
 call minpac#add('airblade/vim-rooter')
 let g:rooter_manual_only = 1
-" let g:rooter_silent_chdir = 1
+let g:rooter_silent_chdir = 1
 " let g:rooter_resolve_links = 1
+
+" Cd to project root
+command Cdp execute "cd " . FindRootDirectory() | execute "pwd"
+" Cd to current file path
+command Cdc cd %:p:h
+
 
 call minpac#add('christoomey/vim-conflicted')
 let g:diffget_local_map = 'gl'
@@ -130,12 +136,14 @@ endw
 
 call minpac#add('sbdchd/neoformat')
 cnoreabbrev f Neoformat
+
 let g:neoformat_enabled_html = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_java = ['prettier']
 let g:neoformat_enabled_python = ['black']
 let g:neoformat_enabled_ruby = ['rufo']
 let g:neoformat_enabled_typescript = ['prettier']
+let g:neoformat_enabled_vue = ['prettier']
 
 " call minpac#add('prettier/vim-prettier')
 
@@ -157,5 +165,12 @@ call minpac#add('mtth/scratch.vim')
 let g:scratch_autohide = 1
 let g:scratch_insert_autohide = 1
 
+call minpac#add('plasticboy/vim-markdown')
+let g:vim_markdown_folding_disabled = 1
+
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')
+
+" call minpac#add('preservim/nerdtree')
+" let g:NERDTreeWinPos="right"
+

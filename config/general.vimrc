@@ -8,14 +8,16 @@ set tabstop=4
 set hlsearch
 set incsearch
 
+set showcmd
+
 " set autochdir
 autocmd BufEnter * silent! lcd %:p:h
 " set hlsearch
 
-let mapleader = ","
+let mapleader = " "
 set wildmode=list:longest
 
-syntax enable
+syntax on
 filetype plugin on
 " netrw
 " let g:netrw_banner = 0

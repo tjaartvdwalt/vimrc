@@ -2,6 +2,7 @@ call minpac#add('dracula/vim', {'name': 'dracula', 'type': 'opt'})
 packadd! dracula
 let g:dracula_colorterm = 0
 colorscheme dracula
+let g:netrw_special_syntax= 1
 
 " call minpac#add('liuchengxu/space-vim-dark', {'type': 'opt'})
 " colorscheme space-vim-dark

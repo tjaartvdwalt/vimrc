@@ -7,9 +7,24 @@ let g:projectionist_heuristics = {
       \   "package.json": {
       \     "package.json": {
       \       "type": "package"
+      \     },
+      \     "src/*.js": {
+      \       "type": "js"
+      \     },
+      \     "src/*.ts": {
+      \       "type": "ts"
+      \     },
+      \     "tests/*.js": {
+      \       "type": "tests"
       \     }
       \   },
       \   "vue.config.js": {
+      \     "src/*.vue": {
+      \       "type": "vue"
+      \     },
+      \     "tests/*.spec.ts": {
+      \       "type": "tests"
+      \     },
       \     "src/components/*.vue": {
       \       "type": "component",
       \       "alternate": "tests/unit/{basename}.ts"

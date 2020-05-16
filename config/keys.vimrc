@@ -1,9 +1,9 @@
 " map <C-n> :Explore<CR>
 " Save with ctrl-s
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
-nmap <C-z> :wq<CR>
-imap <C-z> <Esc>:wq<CR>
+" nmap <C-s> :w<CR>
+" imap <C-s> <Esc>:w<CR>
+" nmap <C-z> :wq<CR>
+" imap <C-z> <Esc>:wq<CR>
 
 " Wayland system clipboard copy/paste. Can remove this once this issue has
 " been resolved:  https://github.com/vim/vim/issues/5157
@@ -19,13 +19,10 @@ imap <C-u> <Esc>:
 
 " Close other windows, except currently focused one
 cnoreabbrev o only
-nmap <C-o> :only<CR>
-
-nmap <C-b> :b#<CR>
-imap <C-b> <Esc>:b#<CR>
 
 nmap <leader>v :edit ~/.vim/config<CR>
 nmap <silent> <leader>s :set spell!<CR>
+set spellfile=~/.vim/spell/en.utf-8.add
 
 " Tab related command shortcuts
 cnoreabbrev t tab
