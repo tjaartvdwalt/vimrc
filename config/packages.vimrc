@@ -50,6 +50,8 @@ let g:airline#extensions#syntastic#enabled = 1
 " let airline#extensions#syntastic#error_symbol = 'E:'
 " let airline#extensions#syntastic#stl_format_err = '%E{[%fe(#%e)]}'
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 call minpac#add('junegunn/gv.vim')
 cnoreabbrev gl GV
@@ -73,6 +75,8 @@ call minpac#add('junegunn/fzf.vim')
 let g:fzf_preview_window = ''
 
 call minpac#add('airblade/vim-gitgutter')
+
+call minpac#add('tpope/vim-obsession')
 call minpac#add('tpope/vim-rails')
 call minpac#add('tpope/vim-rake')
 call minpac#add('tpope/vim-sleuth')
@@ -167,6 +171,11 @@ let g:scratch_insert_autohide = 1
 
 call minpac#add('plasticboy/vim-markdown')
 let g:vim_markdown_folding_disabled = 1
+
+call minpac#add('gcmt/taboo.vim')
+let g:taboo_renamed_tab_format = " [%l]%I%m"
+let g:taboo_tabline = 0
+set sessionoptions+=tabpages,globals
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')
