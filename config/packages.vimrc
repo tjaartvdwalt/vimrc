@@ -1,5 +1,9 @@
 " Initialize minpac
 packadd minpac
+
+"built in plugin
+packadd! matchit
+
 call minpac#init()
 
 " Set shortcut commands
@@ -145,9 +149,9 @@ let g:neoformat_enabled_html = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_java = ['prettier']
 let g:neoformat_enabled_python = ['black']
-let g:neoformat_enabled_ruby = ['rufo']
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_vue = ['prettier']
+" let g:neoformat_verbose = 1
 
 " call minpac#add('prettier/vim-prettier')
 
@@ -176,6 +180,9 @@ call minpac#add('gcmt/taboo.vim')
 let g:taboo_renamed_tab_format = " [%l]%I%m"
 let g:taboo_tabline = 0
 set sessionoptions+=tabpages,globals
+
+call minpac#add('posva/vim-vue')
+call minpac#add('digitaltoad/vim-pug')
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')

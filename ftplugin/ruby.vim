@@ -1,2 +1,2 @@
-let b:ale_fixers = ['rufo']
-let b:ale_linters = ['rufo']
+let b:neoformat_enabled_ruby = ['rubocop']
+let b:ale_linters = ['rubocop']

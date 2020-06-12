@@ -10,14 +10,16 @@ set incsearch
 
 set showcmd
 
+:DoMatchParen
+
 " set autochdir
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 " set hlsearch
 
 let mapleader = " "
 set wildmode=list:longest
 
-syntax on
+syntax enable
 filetype plugin on
 " netrw
 " let g:netrw_banner = 0
