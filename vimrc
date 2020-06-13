@@ -11,6 +11,6 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " Source the vimrc file after saving any .vimrc file
 if has("autocmd")
-   autocmd bufwritepost *.vimrc source $MYVIMRC
+    autocmd bufwritepost *.vimrc source $MYVIMRC
 endif
 

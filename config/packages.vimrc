@@ -87,6 +87,9 @@ call minpac#add('tpope/vim-sleuth')
 call minpac#add('tpope/vim-sensible')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-projectionist')
+call minpac#add('tpope/vim-dadbod')
+call minpac#add('tpope/vim-heroku')
+
 cnoreabbrev a A
 
 call minpac#add('ryanoasis/vim-devicons')
@@ -183,6 +186,11 @@ set sessionoptions+=tabpages,globals
 
 call minpac#add('posva/vim-vue')
 call minpac#add('digitaltoad/vim-pug')
+
+" Wayland system clipboard copy/paste. Can remove this once this issue has
+" been resolved:  https://github.com/vim/vim/issues/5157
+call minpac#add('kana/vim-fakeclip')
+call minpac#add('wincent/terminus')
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')

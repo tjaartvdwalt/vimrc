@@ -10,11 +10,9 @@ set incsearch
 
 set showcmd
 
-:DoMatchParen
-
 " set autochdir
-" autocmd BufEnter * silent! lcd %:p:h
-" set hlsearch
+autocmd BufEnter * silent! lcd %:p:h
+autocmd BufEnter * silent! tcd %:p:h
 
 let mapleader = " "
 set wildmode=list:longest
@@ -35,11 +33,11 @@ let g:netrw_sort_options = "i"
 set undofile
 set undodir=$HOME/.vim/undo
 
-augroup OpenQuickFix
-    autocmd!
-    autocmd QuickFixCmdPost [^l]* cwindow
-    autocmd QuickFixCmdPost l*    lwindow
-augroup END
+" augroup OpenQuickFix
+"     autocmd!
+"     autocmd QuickFixCmdPost [^l]* cwindow
+"     autocmd QuickFixCmdPost l*    lwindow
+" augroup END
 
 " augroup ProjectDrawer
 "   autocmd!

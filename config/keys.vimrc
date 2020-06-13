@@ -5,12 +5,6 @@
 " nmap <C-z> :wq<CR>
 " imap <C-z> <Esc>:wq<CR>
 
-" Wayland system clipboard copy/paste. Can remove this once this issue has
-" been resolved:  https://github.com/vim/vim/issues/5157
-xnoremap "+y y:call system("wl-copy", @")<cr>
-nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
-nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
-
 " nmap <Leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR; clear<CR>
 
 " Command mode shortcut
