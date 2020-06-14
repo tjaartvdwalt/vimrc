@@ -124,7 +124,11 @@ call minpac#add('leafgarland/typescript-vim')
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mattn/emmet-vim')
 call minpac#add('tpope/vim-endwise')
+
 call minpac#add('vim-ruby/vim-ruby')
+let ruby_fold = 1
+let ruby_spellcheck_strings = 1
+
 call minpac#add('tpope/vim-bundler')
 call minpac#add('tpope/vim-unimpaired')
 
@@ -177,20 +181,31 @@ let g:scratch_autohide = 1
 let g:scratch_insert_autohide = 1
 
 call minpac#add('plasticboy/vim-markdown')
-let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_folding_disabled = 1
 
 call minpac#add('gcmt/taboo.vim')
 let g:taboo_renamed_tab_format = " [%l]%I%m"
 let g:taboo_tabline = 0
 set sessionoptions+=tabpages,globals
 
-call minpac#add('posva/vim-vue')
+call minpac#add('leafOfTree/vim-vue-plugin')
+let g:vim_vue_plugin_load_full_syntax = 1
+let g:vim_vue_plugin_use_typescript = 1
+let g:vim_vue_plugin_use_sass = 1
+let g:vim_vue_plugin_highlight_vue_attr = 1
+let g:vim_vue_plugin_use_foldexpr = 1
 call minpac#add('digitaltoad/vim-pug')
 
 " Wayland system clipboard copy/paste. Can remove this once this issue has
 " been resolved:  https://github.com/vim/vim/issues/5157
 call minpac#add('kana/vim-fakeclip')
 call minpac#add('wincent/terminus')
+
+" Python folding
+call minpac#add('tmhedberg/simpylfold')
+" XML folding
+call minpac#add('vim-scripts/XML-Folding')
+au BufNewFile,BufRead *.xml,*.htm,*.html so ~/.vim/pack/minpac/start/XML-Folding/plugin/XMLFolding.vim
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')

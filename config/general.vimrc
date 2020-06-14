@@ -10,6 +10,8 @@ set incsearch
 
 set showcmd
 
+set nofoldenable
+
 " set autochdir
 autocmd BufEnter * silent! lcd %:p:h
 autocmd BufEnter * silent! tcd %:p:h
