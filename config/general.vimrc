@@ -1,6 +1,6 @@
 set encoding=UTF-8
-set relativenumber
-set nu rnu
+" set relativenumber
+set nu
 set list
 set shell=$SHELL
 set tabstop=4
