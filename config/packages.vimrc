@@ -95,20 +95,20 @@ cnoreabbrev a A
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('ntpeters/vim-better-whitespace')
 
-call minpac#add('ervandew/supertab')
-let g:SuperTabDefaultCompletionType = '<C-n>'
+" call minpac#add('ervandew/supertab')
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
 call minpac#add('ycm-core/YouCompleteMe')
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 call minpac#add('sirver/ultisnips')
 call minpac#add('honza/vim-snippets')
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<right>"
-let g:UltiSnipsJumpBackwardTrigger = "<left>"
+" let g:UltiSnipsExpandTrigger = "<tab>"
+" let g:UltiSnipsJumpForwardTrigger = "<right>"
+" let g:UltiSnipsJumpBackwardTrigger = "<left>"
 
 
 call minpac#add('mbbill/undotree')

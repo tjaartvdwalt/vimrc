@@ -7,10 +7,12 @@ set tabstop=4
 
 set hlsearch
 set incsearch
-
 set showcmd
 
 set nofoldenable
+
+set ignorecase
+set smartcase
 
 " set autochdir
 autocmd BufEnter * silent! lcd %:p:h
