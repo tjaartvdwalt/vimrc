@@ -40,16 +40,18 @@ command Cdp execute "cd " . FindRootDirectory() | execute "pwd"
 " Cd to current file path
 command Cdc cd %:p:h
 
+call minpac#add('whiteinge/diffconflicts')
+let g:diffconflicts_vcs = 'git'
 
-call minpac#add('christoomey/vim-conflicted')
-let g:diffget_local_map = 'gl'
-let g:diffget_upstream_map = 'gu'
+" call minpac#add('christoomey/vim-conflicted')
+" let g:diffget_local_map = 'gl'
+" let g:diffget_upstream_map = 'gu'
 
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 let g:airline_powerline_fonts = 1
 " Poor man's airline plugin, add conflicted text to section c
-let g:airline_section_c = '%F    %{ConflictedVersion()}'
+" let g:airline_section_c = '%F    %{ConflictedVersion()}'
 let g:airline#extensions#syntastic#enabled = 1
 " let airline#extensions#syntastic#error_symbol = 'E:'
 " let airline#extensions#syntastic#stl_format_err = '%E{[%fe(#%e)]}'
@@ -69,14 +71,13 @@ let g:twiggy_remote_branch_sort = 'date'
 call minpac#add('tommcdo/vim-fubitive')
 
 call minpac#add('dense-analysis/ale')
-cnoreabbrev l  ALEFix
 let g:ale_completion_enabled = 0
 let g:ale_completion_tsserver_autoimport = 1
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
 
-call minpac#add('junegunn/fzf.vim')
-let g:fzf_preview_window = ''
+" call minpac#add('junegunn/fzf.vim')
+" let g:fzf_preview_window = ''
 
 call minpac#add('airblade/vim-gitgutter')
 
@@ -151,16 +152,7 @@ endw
 
 call minpac#add('sbdchd/neoformat')
 cnoreabbrev f Neoformat
-
-let g:neoformat_enabled_html = ['prettier']
-let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_enabled_java = ['prettier']
-let g:neoformat_enabled_python = ['black']
-let g:neoformat_enabled_typescript = ['prettier']
-let g:neoformat_enabled_vue = ['prettier']
 " let g:neoformat_verbose = 1
-
-" call minpac#add('prettier/vim-prettier')
 
 call minpac#add('neowit/vim-force.com')
 " Download the jar from https://github.com/neowit/tooling-force.com/releases
@@ -182,6 +174,7 @@ let g:scratch_insert_autohide = 1
 
 call minpac#add('plasticboy/vim-markdown')
 " let g:vim_markdown_folding_disabled = 1
+call minpac#add('iamcco/markdown-preview.nvim', {'do': 'call mkdp#util#install()'})
 
 call minpac#add('gcmt/taboo.vim')
 let g:taboo_renamed_tab_format = " [%l]%I%m"
@@ -206,6 +199,16 @@ call minpac#add('tmhedberg/simpylfold')
 " XML folding
 call minpac#add('vim-scripts/XML-Folding')
 au BufNewFile,BufRead *.xml,*.htm,*.html so ~/.vim/pack/minpac/start/XML-Folding/plugin/XMLFolding.vim
+
+call minpac#add('jiangmiao/auto-pairs')
+
+call minpac#add('jlanzarotta/bufexplorer')
+nnoremap <Leader>b :BufExplorer<CR>
+let g:bufExplorerDisableDefaultKeyMapping=1
+let g:bufExplorerShowTabBuffer=1
+
+call minpac#add('cespare/vim-toml')
+
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')

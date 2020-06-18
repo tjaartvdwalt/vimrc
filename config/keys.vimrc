@@ -18,19 +18,7 @@ nmap <leader>v :edit ~/.vim/config<CR>
 nmap <silent> <leader>s :set spell!<CR>
 set spellfile=~/.vim/spell/en.utf-8.add
 
-" Tab related command shortcuts
-cnoreabbrev t tab
-cnoreabbrev te tabedit
-cnoreabbrev tc tabclose
-cnoreabbrev tm tabm
-cnoreabbrev to tabonly
-
 cnoreabbrev ex Explore
 
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>cg :Gcd<CR>:pwd<CR>
-
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>f :GFiles<CR>
-nmap <Leader>m :Maps<CR>
-
