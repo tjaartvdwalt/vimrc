@@ -209,6 +209,7 @@ let g:bufExplorerShowTabBuffer=1
 
 call minpac#add('cespare/vim-toml')
 
+call minpac#add('vim-scripts/loremipsum')
 
 " call minpac#add('vim-syntastic/syntastic')
 " call minpac#add('Quramy/tsuquyomi')
